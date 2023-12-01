@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/TipsAndCheck/eBill
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/TipsAndCheck/eBill/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/TipsAndCheck/eBill/Views/Home/AllBills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BbGxCaWxscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/TipsAndCheck/eBill/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/TipsAndCheck/eBill/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/TipsAndCheck/eBill/Views/Shared/Error.cshtml]

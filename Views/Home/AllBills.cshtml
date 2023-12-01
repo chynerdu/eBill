@@ -1,0 +1,99 @@
+@model eBill.Models.Bill;
+
+@{
+  ViewData["Title"] = "eBill";
+}
+
+<div class="row align-items-start">
+  <div class="col-md-6">
+    <h4>@ViewData["Title"]</h4>
+
+<div class="card" style="width: 43rem;">
+  <div class="card-header">
+   Bill
+  </div>
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+       <th scope="col">Amount</th>
+       <th scope="col">Due Date</th>
+       <th scope="col">Created Date</th>
+    </tr>
+  </thead>
+  <tbody>
+   @if (Model.BillList.Count == 0)
+    {
+      <p>There are no bills yet.</p>
+    }
+ 
+      @foreach (var BillItem in Model.BillList)
+     {  
+      <tr>
+         <td> @BillItem.Name </td>
+         <td> @BillItem.Amount </td>
+         <td> @BillItem.DueDate </td>
+         <td> @BillItem.CreatedDate </td>
+       </tr>
+      }
+
+  </tbody>
+</table>
+</div>
+
+  </br>
+    <form action="/index/delete" method="post">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newBillModal"> Create Bill </button>
+      <button type="submit" name="button" class="btn btn-danger">Clear All </button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newBillModal" tabindex="-1" role="dialog" aria-labelledby="newBillModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newBillModalLongTitle">Create a Bill</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <form method="post" asp-controller="Home" asp-action="Create">
+      <div class="modal-body">
+      <input type="hidden" asp-for="Id" />
+      <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class="control-label" })
+        @Html.TextBoxFor(m => m.Name, new { @class="form-control" })
+        <span asp-validation-for="Name" class="text-danger"></span>
+      </div>
+        </br>
+     <div class="form-group">
+        @Html.LabelFor(m => m.Amount, new { @class="control-label" })
+        @Html.TextBoxFor(m => m.Amount, new { @class="form-control" })
+        <span asp-validation-for="Amount" class="text-danger"></span>
+      </div>
+        </br>
+      <div class="form-group">
+       <label class="control-label"> Due Date</label>
+       @Html.EditorFor(model => model.DueDate, new { id = "due_date", @class = "form-control" })
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+     $("#due_date").datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>

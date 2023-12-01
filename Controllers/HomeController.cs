@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using eBill.Models;
 
+
 namespace eBill.Controllers;
 
 public class HomeController : Controller
@@ -13,9 +14,47 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public ActionResult Index()
     {
-        return View();
+        Bill record = new Bill();
+
+     // Get list of Bill
+       record.BillList = Bill.GetAll().ToList();
+       
+        return View(record);
+    }
+
+
+    [HttpPost]
+    public ActionResult Create(Bill model)
+    {
+     if (!ModelState.IsValid)
+     {
+       return RedirectToAction("Index");
+     }
+      // create a new Bill
+       Bill.CreateBill(model);
+       return RedirectToAction("Index");
+    }
+
+
+    [HttpPost("/index/delete")]
+    public ActionResult DeleteAll()
+    {
+      // Bonus feature to Clear all Bill item
+      Bill.ClearAll();
+      return RedirectToAction("Index");
+    }
+
+     
+       public ActionResult AllBills()
+    {
+        Bill record = new Bill();
+
+     // Get list of Bill
+       record.BillList = Bill.GetAll().ToList();
+       
+        return View(record);
     }
 
     public IActionResult Privacy()

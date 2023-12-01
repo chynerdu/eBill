@@ -1,8 +1,62 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model eBill.Models.Bill;
+
+@{
+  ViewData["Title"] = "eBill";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row align-items-start">
+  <div class="col-md-6">
+    
+    <h4>@ViewData["Title"]</h4>
+
+<form method="post" asp-controller="Home" asp-action="Create"
+      class="border rounded-md border-3 ml-4 mt-4 shadow-md overflow-hidden"
+    >
+      <div style="background-color: rgb(219, 213, 213)">
+        <img
+          class="w-100"
+          
+          src="https://www.datarails.com/wp-content/uploads/2021/03/Budget.jpg"
+        />
+      </div>
+      <div class="p-5">
+        
+         <div class="form-group pb-3">
+        @Html.LabelFor(m => m.Name, new { @class="control-label" })
+        @Html.TextBoxFor(m => m.Name, new { @class="form-control" })
+        <span asp-validation-for="Name" class="text-danger"></span>
+      </div>
+       <div class="form-group pb-3">
+        @Html.LabelFor(m => m.Amount, new { @class="control-label" })
+        @Html.TextBoxFor(m => m.Amount, new { @class="form-control" })
+        <span asp-validation-for="Amount" class="text-danger"></span>
+      </div>
+        </br>
+      <div class="form-group pb-3">
+       <label class="control-label"> Due Date</label>
+       @Html.EditorFor(model => model.DueDate, new { id = "due_date", @class = "form-control" })
+      </div>
+        <div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 text-uppercase font-weight-bold block"
+          >
+            create bill
+          </button>
+        </div>
+      </div>
+    </form>
 </div>
+</div>
+
+
+
+<script>
+  $(document).ready(function () {
+     $("#due_date").datepicker({ dateFormat: 'dd/mm/yy' });
+  });
+
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
