@@ -9,9 +9,7 @@
     
     <h4>@ViewData["Title"]</h4>
 
-<form method="post" asp-controller="Home" asp-action="Create"
-      class="border rounded-md border-3 ml-4 mt-4 shadow-md overflow-hidden"
-    >
+<form method="post" asp-controller="Home" asp-action="Create" class="border rounded-md border-3 ml-4 mt-4 shadow-md overflow-hidden">
       <div style="background-color: rgb(219, 213, 213)">
         <img
           class="w-100"
@@ -39,24 +37,13 @@
         <div>
           <button
             type="submit"
-            class="btn btn-primary w-100 text-uppercase font-weight-bold block"
-          >
+            class="btn btn-primary w-100 text-uppercase font-weight-bold block">
             create bill
           </button>
         </div>
       </div>
     </form>
+      
 </div>
 </div>
 
-
-
-<script>
-  $(document).ready(function () {
-     $("#due_date").datepicker({ dateFormat: 'dd/mm/yy' });
-  });
-
-  $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-</script>

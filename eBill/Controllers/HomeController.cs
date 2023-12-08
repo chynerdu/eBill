@@ -34,7 +34,7 @@ public class HomeController : Controller
      }
       // create a new Bill
        Bill.CreateBill(model);
-       return RedirectToAction("Index");
+       return RedirectToAction("AllBills");
     }
 
 
@@ -43,7 +43,7 @@ public class HomeController : Controller
     {
       // Bonus feature to Clear all Bill item
       Bill.ClearAll();
-      return RedirectToAction("Index");
+      return RedirectToAction("AllBills");
     }
 
      
