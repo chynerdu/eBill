@@ -1,7 +1,4 @@
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/CoverletSourceRootsMapping
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.runner.reporters.netcoreapp10.dll
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.runner.utility.netcoreapp10.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill.deps.json
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill.runtimeconfig.json
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/appsettings.Development.json
@@ -9,6 +6,12 @@
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/launch.json
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill.staticwebassets.runtime.json
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/selenium-manager/linux/selenium-manager
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/selenium-manager/macos/selenium-manager
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/selenium-manager/windows/selenium-manager.exe
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.runner.utility.netcoreapp10.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill.Tests.deps.json
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill.Tests.runtimeconfig.json
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/eBill.Tests.dll
@@ -24,6 +27,7 @@
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/testhost.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/NuGet.Frameworks.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/WebDriver.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.abstractions.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.assert.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/xunit.core.dll
@@ -106,7 +110,3 @@
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/obj/Debug/net7.0/eBill.Tests.pdb
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/obj/Debug/net7.0/eBill.Tests.genruntimeconfig.cache
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/obj/Debug/net7.0/ref/eBill.Tests.dll
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/selenium-manager/linux/selenium-manager
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/selenium-manager/macos/selenium-manager
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/selenium-manager/windows/selenium-manager.exe
-/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill.Tests/bin/Debug/net7.0/WebDriver.dll
