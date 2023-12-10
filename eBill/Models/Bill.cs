@@ -1,5 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
+using eBill.Data;
+
 namespace eBill.Models;
 
 public class Bill
@@ -19,7 +21,7 @@ public class Bill
     private static List<Bill> _instances = new List<Bill>() { };
 
   // Create a bill item
-    public static void CreateBill(Bill record)
+    public static async void CreateBill(Bill record, AppDbContext appDbContext)
     {
        Bill thisBill = new Bill();
        thisBill.Name = record.Name;
@@ -27,15 +29,19 @@ public class Bill
        thisBill.Paid = record.Paid;
        thisBill.DueDate = record.DueDate;
        thisBill.CreatedDate = DateTime.Now;
-       thisBill.Id = _instances.Count + 1;
-      _instances.Add(thisBill);
+
+        appDbContext.bill.Add(thisBill);
+        await appDbContext.SaveChangesAsync();
+      //  return Ok(thisBill);
+      //_instances.Add(thisBill);
      
     }
 
     // Get all bill
-    public static List<Bill> GetAll()
+    public static async Task<List<Bill>> GetAll(AppDbContext appDbContext)
     {
-        return _instances;
+        var bills =  appDbContext.bill.ToList();
+        return bills;
     }
 
    // Clear all bill

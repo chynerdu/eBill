@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using eBill.Models;
-
+using eBill.Data;
 
 namespace eBill.Controllers;
 
@@ -9,31 +9,45 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    private readonly AppDbContext _appDbContext;
+
+    public HomeController(ILogger<HomeController> logger, AppDbContext appDbContext)
     {
         _logger = logger;
+        _appDbContext = appDbContext;
     }
 
-    public ActionResult Index()
+    public IActionResult Index()
     {
         Bill record = new Bill();
 
-     // Get list of Bill
-       record.BillList = Bill.GetAll().ToList();
+        // Get list of Bill
+        record.BillList = _appDbContext.bill.ToList();
        
         return View(record);
     }
 
 
     [HttpPost]
-    public ActionResult Create(Bill model)
+    public async Task<ActionResult> Create(Bill model)
     {
      if (!ModelState.IsValid)
      {
        return RedirectToAction("Index");
      }
-      // create a new Bill
-       Bill.CreateBill(model);
+        // create a new BillBill thisBill = new Bill();
+        Bill thisBill = new Bill();
+        thisBill.Name = model.Name;
+        thisBill.Amount = model.Amount;
+        thisBill.Paid = model.Paid;
+        thisBill.DueDate = model.DueDate;
+        thisBill.CreatedDate = DateTime.Now;
+
+        _appDbContext.bill.Add(thisBill);
+        await _appDbContext.SaveChangesAsync();
+
+
+        //Bill.CreateBill(model, _appDbContext);
        return RedirectToAction("AllBills");
     }
 
@@ -51,9 +65,9 @@ public class HomeController : Controller
     {
         Bill record = new Bill();
 
-     // Get list of Bill
-       record.BillList = Bill.GetAll().ToList();
-       
+        // Get list of Bill
+        record.BillList = _appDbContext.bill.ToList();
+
         return View(record);
     }
 
