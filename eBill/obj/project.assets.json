@@ -1028,11 +1028,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill_2/eBill/eBill.csproj",
+      "projectUniqueName": "/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/eBill.csproj",
       "projectName": "eBill",
-      "projectPath": "/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill_2/eBill/eBill.csproj",
+      "projectPath": "/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/eBill.csproj",
       "packagesPath": "/Users/chineduuche/.nuget/packages/",
-      "outputPath": "/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill_2/eBill/obj/",
+      "outputPath": "/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/chineduuche/.nuget/NuGet/NuGet.Config"
