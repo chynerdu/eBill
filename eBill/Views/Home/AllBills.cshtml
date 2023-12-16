@@ -1,4 +1,4 @@
-@model eBill.Models.Bill;
+@model  ClassLibrary.Model.Bill;
 
 
 
@@ -26,10 +26,12 @@
                    href="#">All</a>
 
             </nav>
-            @if (Model.BillList.Count == 0)
+            @if (Model.BillList == null || Model.BillList.Count == 0)
             {
                 <p>There are no bills yet.</p>
-            }
+            } else
+
+       
 
             @foreach (var BillItem in Model.BillList)
             {

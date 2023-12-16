@@ -89,6 +89,7 @@
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/MySqlConnector.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/System.CodeDom.dll
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/obj/Debug/net7.0/eBill.csproj.AssemblyReference.cache
@@ -115,3 +116,5 @@
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/obj/Debug/net7.0/eBill.pdb
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/obj/Debug/net7.0/eBill.genruntimeconfig.cache
 /Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/obj/Debug/net7.0/ref/eBill.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/ClassLibrary.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/eBill/bin/Debug/net7.0/ClassLibrary.pdb

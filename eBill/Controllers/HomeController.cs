@@ -1,7 +1,9 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using eBill.Models;
-using eBill.Data;
+using Newtonsoft.Json;
+using System.Text;
+using ClassLibrary.Model;
 
 namespace eBill.Controllers;
 
@@ -9,22 +11,58 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    private readonly AppDbContext _appDbContext;
+   
 
-    public HomeController(ILogger<HomeController> logger, AppDbContext appDbContext)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        _appDbContext = appDbContext;
+      
     }
 
-    public IActionResult Index()
+
+
+    public ActionResult Index()
     {
+
         Bill record = new Bill();
 
         // Get list of Bill
-        record.BillList = _appDbContext.bill.ToList();
-       
+
         return View(record);
+    }
+
+    public async Task<IActionResult> AllBills()
+    {       
+        using (var httpClient = new HttpClient())
+        {
+            using (var response = await httpClient.GetAsync("https://localhost:7082/api/eBill"))
+            {
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                //System.Console.WriteLine(apiResponse);
+                List<Bill> billList = new List<Bill>();
+                Bill billItem = new Bill();
+               
+                List<Bill> newList = JsonConvert.DeserializeObject<List<Bill>>(apiResponse);
+                foreach (var result in newList)
+                {
+
+                    //Console.WriteLine(result);
+                    Bill thisBill = new Bill();
+                    thisBill.Name = result.Name;
+                    thisBill.Amount = result.Amount;
+                    thisBill.Paid = result.Paid;
+                    thisBill.DueDate = result.DueDate;
+                    thisBill.CreatedDate = result.CreatedDate;
+
+                    billList.Add(thisBill);
+                    System.Console.WriteLine(thisBill.Name);
+                }
+                billItem.BillList = billList;
+                System.Console.WriteLine(billItem.BillList.Count);
+                return View(billItem);
+            }
+        }
+        
     }
 
 
@@ -43,12 +81,18 @@ public class HomeController : Controller
         thisBill.DueDate = model.DueDate;
         thisBill.CreatedDate = DateTime.Now;
 
-        _appDbContext.bill.Add(thisBill);
-        await _appDbContext.SaveChangesAsync();
+        using (var httpClient = new HttpClient())
+        {
+            StringContent content = new StringContent(JsonConvert.SerializeObject(thisBill), Encoding.UTF8, "application/json");
 
-
-        //Bill.CreateBill(model, _appDbContext);
-       return RedirectToAction("AllBills");
+            using (var response = await httpClient.PostAsync("https://localhost:7082/api/eBill", content))
+            {
+                string apiResponse = await response.Content.ReadAsStringAsync();
+              
+            }
+        }
+       
+        return RedirectToAction("AllBills");
     }
 
 
@@ -56,20 +100,11 @@ public class HomeController : Controller
     public ActionResult DeleteAll()
     {
       // Bonus feature to Clear all Bill item
-      Bill.ClearAll();
+     
       return RedirectToAction("AllBills");
     }
 
      
-       public ActionResult AllBills()
-    {
-        Bill record = new Bill();
-
-        // Get list of Bill
-        record.BillList = _appDbContext.bill.ToList();
-
-        return View(record);
-    }
 
     public IActionResult Privacy()
     {

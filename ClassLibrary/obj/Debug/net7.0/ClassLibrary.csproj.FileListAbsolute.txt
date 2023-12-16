@@ -1,0 +1,12 @@
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/bin/Debug/net7.0/ClassLibrary.deps.json
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/bin/Debug/net7.0/ClassLibrary.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/bin/Debug/net7.0/ClassLibrary.pdb
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.csproj.AssemblyReference.cache
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.AssemblyInfoInputs.cache
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.AssemblyInfo.cs
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.csproj.CoreCompileInputs.cache
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/refint/ClassLibrary.dll
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ClassLibrary.pdb
+/Users/chineduuche/Documents/cambrian/Semester2/AdvancedWeb/eBill/ClassLibrary/obj/Debug/net7.0/ref/ClassLibrary.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bHjO0EPzHdnDq6NYCdiMQi0p+vSiPPyqvVPQYTwGftY=",
+  "Source": "eBillsAPI",
+  "BasePath": "_content/eBillsAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
